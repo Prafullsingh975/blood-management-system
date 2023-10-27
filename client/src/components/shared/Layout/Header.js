@@ -1,5 +1,6 @@
 import React from "react";
-import { BiDonateBlood, BiUserCircle } from "react-icons/bi";
+import {  BiUserCircle } from "react-icons/bi";
+import {MdBloodtype} from "react-icons/md";
 import { useNavigate, useLocation, Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 const Header = () => {
@@ -18,7 +19,7 @@ const Header = () => {
       <nav className="navbar">
         <div className="container-fluid ">
           <div className="navbar-brand h1 ">
-            <BiDonateBlood color="red" /> Blood Bank App
+            <MdBloodtype color="red" fontSize={"1.6rem"} /> Blood Bank App
           </div>
           <ul className="navbar-nav flex-row">
             <li className="nav-item mx-3">

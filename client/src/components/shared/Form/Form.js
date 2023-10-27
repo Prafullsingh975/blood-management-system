@@ -51,7 +51,7 @@ const Form = ({ formType, submitBtn, formTitle }) => {
               Donar
             </label>
           </div>
-          <div className="form-check ms-2">
+          {formType !== "register" && <div className="form-check ms-2">
             <input
               type="radio"
               className="form-check-input"
@@ -63,7 +63,7 @@ const Form = ({ formType, submitBtn, formTitle }) => {
             <label htmlFor="adminRadio" className="form-check-label">
               Admin
             </label>
-          </div>
+          </div>}
           <div className="form-check ms-2">
             <input
               type="radio"
@@ -209,7 +209,7 @@ const Form = ({ formType, submitBtn, formTitle }) => {
               <Link to="/login"> Login !</Link>
             </p>
           )}
-          <button className="btn btn-primary mt-2" type="submit">
+          <button className="btn btn-dark mt-2" type="submit">
             {submitBtn}
           </button>
         </div>
