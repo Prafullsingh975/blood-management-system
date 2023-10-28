@@ -16,11 +16,7 @@ const app = express();
 
 //middlewares
 app.use(
-  cors({
-    origin: ["https://blood-management-system-one.vercel.app"],
-    methods:["POST","GET"],
-    credentials:true
-  })
+  cors()
 );
 app.use(express.json());
 app.use(morgan("dev"));
