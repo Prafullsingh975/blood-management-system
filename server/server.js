@@ -23,7 +23,13 @@ app.use((req, res, next) => {
   next();
 });
 
-// app.use(cors());
+app.use(
+  cors({
+    origin: ["https://blood-management-system-one.vercel.app"],
+    methods: ["POST", "GET"],
+    credentials: true,
+  })
+);
 app.use(express.json());
 app.use(morgan("dev"));
 
