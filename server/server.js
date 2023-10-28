@@ -15,13 +15,15 @@ connectDB();
 const app = express();
 
 //middlewares
-app.use(
-  cors({
-    origin: ["https://blood-management-system-one.vercel.app"],
-    methods: ["POST", "GET"],
-    credentials: true,
-  })
-);
+app.use((req, res, next) => {
+  res.setHeader(
+    "Access-Control-Allow-Origin",
+    "https://blood-management-system-one.vercel.app"
+  );
+  next();
+});
+
+app.use(cors());
 app.use(express.json());
 app.use(morgan("dev"));
 
