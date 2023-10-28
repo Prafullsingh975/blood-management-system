@@ -22,6 +22,15 @@ app.use((req, res, next) => {
   );
   next();
 });
+app.options("*", (req, res) => {
+  res.setHeader(
+    "Access-Control-Allow-Origin",
+    "https://blood-management-system-one.vercel.app"
+  );
+  // other headers...
+  res.end();
+});
+
 
 app.use(
   cors({
